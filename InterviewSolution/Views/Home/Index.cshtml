@@ -31,7 +31,9 @@
 
     @foreach (var item in ViewBag.Table1)
     {
-        <tr >
+ 
+
+        <tr>
             <td>
                 @item.Name
             </td>
@@ -52,6 +54,8 @@
             </td>
 
         </tr>
+    
+       
     }
 
 </table>
@@ -59,28 +63,31 @@
 
 <h4>Documents Over 200 Size</h4>
 
-<table class="table  table-hover table-bordered">
-    <tr class=" alert-danger ">
-        <th>
-            Name
-        </th>
-        <th>
-            Size
-        </th>
-        <th>
-            Pdf Version
-        </th>
-        <th>
-            Text
-        </th>
-        <th>
-            PixelType
-        </th>
-        <th>
-            Frame Count
-        </th>
-        <th></th>
-    </tr>
+<table class="table  table-hover  table-bordered">
+    
+        <tr class="alert-danger">
+            <th>
+                Name
+            </th>
+            <th>
+                Size
+            </th>
+            <th>
+                Pdf Version
+            </th>
+            <th>
+                Text
+            </th>
+            <th>
+                PixelType
+            </th>
+            <th>
+                Frame Count
+            </th>
+            <th></th>
+        </tr>
+
+   
 
     @foreach (var item in ViewBag.Table2)
     {
@@ -271,7 +278,7 @@
 </table>
 
 
-<h4>Sort All Document</h4>
+<h4>Sort All Document by size</h4>
 
 
 <table class="table table table-bordered">
