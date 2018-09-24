@@ -15,17 +15,17 @@ namespace InterviewSolution.Controllers
             MyDocumentProvider document = new MyDocumentProvider();
             List<DisplayAllDocument> allDocument = new List <DisplayAllDocument>();
           
-            IEnumerable<Document> test = document.GetDocuments("All Document");
+            IEnumerable<Document> plainList = document.GetDocuments("Plain Document");
 
-            IEnumerable<Document> test2 = document.GetDocuments("PDF Document");
+            IEnumerable<Document> pdfList = document.GetDocuments("PDF Document");
 
-            IEnumerable<Document> test3 = document.GetDocuments("Color Document");
+            IEnumerable<Document> tiffList = document.GetDocuments("Tiff Document");
 
             PlainTextDocument kings = new PlainTextDocument();
 
         
           
-            foreach (PdfDocument each in test2)
+            foreach (PdfDocument each in pdfList)
             {
                 DisplayAllDocument temp = new DisplayAllDocument();
 
@@ -41,7 +41,7 @@ namespace InterviewSolution.Controllers
                 allDocument.Add(temp);
             }
 
-            foreach (TiffDocument each in test3)
+            foreach (TiffDocument each in tiffList)
             {
                 DisplayAllDocument temp = new DisplayAllDocument();
 
@@ -57,7 +57,7 @@ namespace InterviewSolution.Controllers
 
                 allDocument.Add(temp);
             }
-            foreach (PlainTextDocument each in test)
+            foreach (PlainTextDocument each in plainList)
             {
                 DisplayAllDocument temp = new DisplayAllDocument();
 

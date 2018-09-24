@@ -13,10 +13,8 @@ namespace InterviewSolution.Models
 
        public override string Display()
         {
-            string james =  "kingsley";
-
-
-            return james;
+           
+            return Display();
         }
     }
 }

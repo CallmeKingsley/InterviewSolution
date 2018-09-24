@@ -11,8 +11,6 @@ namespace InterviewSolution.Models
 
         public override string Display()
         {
-
-
             return base.Display();
         }
     }

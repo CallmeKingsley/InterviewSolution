@@ -14,8 +14,7 @@ namespace InterviewSolution.Models
         public IEnumerable<Document> GetDocuments(string Instruction)
         {
 
-            List<ImageDocument> colorDocument = new List<ImageDocument>();
-            List<Document> All_Data = new List<Document>();
+            
            
             List<PdfDocument> pdfObj = new List<PdfDocument>();
             List<TiffDocument> tiffObj = new List<TiffDocument>();
@@ -58,12 +57,7 @@ namespace InterviewSolution.Models
             PlainText2.Size = 12;
             PlainText2.Text = "123456789";
 
-            All_Data.Add(pdf);
-            All_Data.Add(pdf2);
-            All_Data.Add(PlainText1);
-            All_Data.Add(PlainText2);
-            All_Data.Add(tiff);
-            All_Data.Add(tiff2);
+  
 
 
             pdfObj.Add(pdf);
@@ -77,10 +71,7 @@ namespace InterviewSolution.Models
             plainObj.Add(PlainText1);
             plainObj.Add(PlainText2);
 
-            colorDocument.Add(tiff);
-            colorDocument.Add(tiff2);
-            colorDocument.Add(pdf);
-            colorDocument.Add(pdf2);
+          
 
 
 
@@ -88,10 +79,11 @@ namespace InterviewSolution.Models
             IEnumerable<Document> PdfDocumentData = (IEnumerable<PdfDocument>)(pdfObj);
             IEnumerable<Document> PlainTextDocumentData = (IEnumerable<PlainTextDocument>)(plainObj);
             IEnumerable<Document> TiffDocumentData= (IEnumerable<TiffDocument>)(tiffObj);
-            IEnumerable<Document> AllData = (IEnumerable<Document>)(All_Data);
-            IEnumerable<Document> ColorDocument = (IEnumerable<ImageDocument>)(colorDocument);
 
-            if (Instruction == "All Document"){
+
+           
+
+            if (Instruction == "Plain Document"){
 
                 return PlainTextDocumentData;
 
@@ -99,7 +91,7 @@ namespace InterviewSolution.Models
 
                 return PdfDocumentData;
 
-            }else if (Instruction == "Color Document")
+            }else if (Instruction == "Tiff Document")
             {
                 return TiffDocumentData;
             }
