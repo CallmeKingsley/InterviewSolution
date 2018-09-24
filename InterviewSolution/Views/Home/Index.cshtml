@@ -4,11 +4,11 @@
     ViewBag.Title = "Index";
 }
 
-<h2>All Document</h2>
+<h4>All Document</h4>
 
-<table class="table">
-    <tr>
-        <th>
+<table class="table  table-hover table-bordered">
+    <tr class=" alert-danger  ">
+        <th >
             Name
         </th>
         <th>
@@ -31,7 +31,7 @@
 
     @foreach (var item in ViewBag.Table1)
     {
-        <tr>
+        <tr >
             <td>
                 @item.Name
             </td>
@@ -57,10 +57,10 @@
 </table>
 
 
-<h2>Documents Over 200 Size</h2>
+<h4>Documents Over 200 Size</h4>
 
-<table class="table">
-    <tr>
+<table class="table  table-hover table-bordered">
+    <tr class=" alert-danger ">
         <th>
             Name
         </th>
@@ -110,11 +110,11 @@
 </table>
 
 
-<h2>Documents Over 200 size and is PDF</h2>
+<h4>Documents Over 200 size and is PDF</h4>
 
 
-<table class="table">
-    <tr>
+<table class="table  table-hover table-bordered">
+    <tr class=" alert-danger ">
         <th>
             Name
         </th>
@@ -164,11 +164,11 @@
 </table>
 
 
-<h2>All Color</h2>
+<h4>All Color</h4>
 
 
-<table class="table">
-    <tr>
+<table class="table  table-hover table-bordered">
+    <tr class=" alert-danger ">
         <th>
             Name
         </th>
@@ -217,11 +217,11 @@
 
 </table>
 
-<h2>All Pdf Version  = 2</h2>
+<h4>All Pdf Version  = 2</h4>
 
 
-<table class="table">
-    <tr>
+<table class="table  table-hover table-bordered">
+    <tr class=" alert-danger ">
         <th>
             Name
         </th>
@@ -271,11 +271,11 @@
 </table>
 
 
-<h2>Sort All Document</h2>
+<h4>Sort All Document</h4>
 
 
-<table class="table">
-    <tr>
+<table class="table table table-bordered">
+    <tr class=" alert-danger  ">
         <th>
             Name
         </th>
@@ -299,8 +299,8 @@
 
     @foreach (var item in ViewBag.Table6)
     {
-        <tr>
-            <td>
+        <tr >
+            <td >
                 @item.Name
             </td>
             <td>
