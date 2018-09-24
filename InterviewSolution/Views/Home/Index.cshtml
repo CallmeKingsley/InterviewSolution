@@ -8,7 +8,7 @@
 
 <table class="table  table-bordered">
     <tr class=" alert-danger  ">
-        <th >
+        <th>
             Name
         </th>
         <th>
@@ -31,7 +31,7 @@
 
     @foreach (var item in ViewBag.Table1)
     {
- 
+
 
         <tr>
             <td>
@@ -54,8 +54,8 @@
             </td>
 
         </tr>
-    
-       
+
+
     }
 
 </table>
@@ -64,30 +64,30 @@
 <h4>Documents Over 200 Size</h4>
 
 <table class="table    table-bordered">
-    
-        <tr class="alert-danger">
-            <th>
-                Name
-            </th>
-            <th>
-                Size
-            </th>
-            <th>
-                Pdf Version
-            </th>
-            <th>
-                Text
-            </th>
-            <th>
-                PixelType
-            </th>
-            <th>
-                Frame Count
-            </th>
-            <th></th>
-        </tr>
 
-   
+    <tr class="alert-danger">
+        <th>
+            Name
+        </th>
+        <th>
+            Size
+        </th>
+        <th>
+            Pdf Version
+        </th>
+        <th>
+            Text
+        </th>
+        <th>
+            PixelType
+        </th>
+        <th>
+            Frame Count
+        </th>
+        <th></th>
+    </tr>
+
+
 
     @foreach (var item in ViewBag.Table2)
     {
@@ -277,7 +277,6 @@
 
 </table>
 
-
 <h4>Sort All Document by size</h4>
 
 
@@ -306,8 +305,8 @@
 
     @foreach (var item in ViewBag.Table6)
     {
-        <tr >
-            <td >
+        <tr>
+            <td>
                 @item.Name
             </td>
             <td>

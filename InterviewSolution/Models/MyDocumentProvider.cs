@@ -10,28 +10,40 @@ namespace InterviewSolution.Models
     {
         
 
-
+        /* 
+         * 
+         * I needed to access the children elements in the home controller
+         * but i could not access it using the parent.
+         * 
+         * So i decided to add an arguement in GetDocument() called instrution to instruction GetDocument() 
+         * on which child object it should return.
+         * 
+         * if its a strict requirement not to pass an argument in GetDocument(), i believe intime 
+         * i would figure out how to work around it.
+         */
         public IEnumerable<Document> GetDocuments(string Instruction)
         {
 
             
-           
+            
             List<PdfDocument> pdfObj = new List<PdfDocument>();
             List<TiffDocument> tiffObj = new List<TiffDocument>();
             List<PlainTextDocument> plainObj = new List<PlainTextDocument>();
- 
+            List<Document> emptyobj = new List<Document>();
+
+
 
             TiffDocument tiff = new TiffDocument();
-            tiff.Name = "Tiff2";
-            tiff.Size = 200;
-            tiff.PixelType = PixelType.BlackAndWhite;
-            tiff.FrameCount = 20;
+            tiff.Name = "Tiff1";
+            tiff.Size = 100;
+            tiff.PixelType = PixelType.Color;
+            tiff.FrameCount = 10;
 
             TiffDocument tiff2 = new TiffDocument();
-            tiff2.Name = "Tiff1";
-            tiff2.Size = 100;
-            tiff2.PixelType = PixelType.Color;
-            tiff2.FrameCount = 10;
+            tiff2.Name = "Tiff2";
+            tiff2.Size = 200;
+            tiff2.PixelType = PixelType.BlackAndWhite;
+            tiff2.FrameCount = 20;
 
             PdfDocument pdf = new PdfDocument();
             pdf.Name = "Application1";
@@ -79,9 +91,9 @@ namespace InterviewSolution.Models
             IEnumerable<Document> PdfDocumentData = (IEnumerable<PdfDocument>)(pdfObj);
             IEnumerable<Document> PlainTextDocumentData = (IEnumerable<PlainTextDocument>)(plainObj);
             IEnumerable<Document> TiffDocumentData= (IEnumerable<TiffDocument>)(tiffObj);
+            IEnumerable<Document> Empty = (IEnumerable<Document>)(emptyobj);
 
 
-           
 
             if (Instruction == "Plain Document"){
 
@@ -95,9 +107,13 @@ namespace InterviewSolution.Models
             {
                 return TiffDocumentData;
             }
+            else
+            {
+                return Empty;
+            }
 
 
-            return TiffDocumentData;
+           
         }
 
      
